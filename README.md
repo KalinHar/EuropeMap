@@ -1,0 +1,1 @@
+Europe SVG Map
