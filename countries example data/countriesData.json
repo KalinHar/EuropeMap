@@ -1,0 +1,515 @@
+[
+  {
+    "code": "RU",
+    "name": "Russia",
+    "capital": "Moscow",
+    "population": 144400000,
+    "area": 3982000,
+    "avgAge": 40,
+    "netSpeed": 89
+  },
+  {
+    "code": "NL",
+    "name": "Netherlands",
+    "capital": "Amsterdam",
+    "population": 17900000,
+    "area": 41543,
+    "avgAge": 43,
+    "netSpeed": 213
+  },
+  {
+    "code": "CY",
+    "name": "Cyprus",
+    "capital": "Nicosia",
+    "population": 1350000,
+    "area": 9251,
+    "avgAge": 38,
+    "netSpeed": 120
+  },
+  {
+    "code": "UA",
+    "name": "Ukraine",
+    "capital": "Kyiv",
+    "population": 37000000,
+    "area": 603550,
+    "avgAge": 41,
+    "netSpeed": 85
+  },
+  {
+    "code": "TR",
+    "name": "Turkey",
+    "capital": "Ankara",
+    "population": 86000000,
+    "area": 23764,
+    "avgAge": 33,
+    "netSpeed": 45
+  },
+  {
+    "code": "SE",
+    "name": "Sweden",
+    "capital": "Stockholm",
+    "population": 10600000,
+    "area": 450295,
+    "avgAge": 41,
+    "netSpeed": 220
+  },
+  {
+    "code": "SI",
+    "name": "Slovenia",
+    "capital": "Ljubljana",
+    "population": 2110000,
+    "area": 20273,
+    "avgAge": 45,
+    "netSpeed": 180
+  },
+  {
+    "code": "SK",
+    "name": "Slovakia",
+    "capital": "Bratislava",
+    "population": 5500000,
+    "area": 49035,
+    "avgAge": 41,
+    "netSpeed": 150
+  },
+  {
+    "code": "RS",
+    "name": "Serbia",
+    "capital": "Belgrade",
+    "population": 6800000,
+    "area": 88361,
+    "avgAge": 43,
+    "netSpeed": 90
+  },
+  {
+    "code": "RO",
+    "name": "Romania",
+    "capital": "Bucharest",
+    "population": 19000000,
+    "area": 238391,
+    "avgAge": 42,
+    "netSpeed": 200
+  },
+  {
+    "code": "PT",
+    "name": "Portugal",
+    "capital": "Lisbon",
+    "population": 10400000,
+    "area": 92212,
+    "avgAge": 45,
+    "netSpeed": 190
+  },
+  {
+    "code": "PL",
+    "name": "Poland",
+    "capital": "Warsaw",
+    "population": 38000000,
+    "area": 312685,
+    "avgAge": 42,
+    "netSpeed": 170
+  },
+  {
+    "code": "SJ",
+    "name": "Svalbard and Jan Mayen",
+    "capital": "Longyearbyen",
+    "population": 2600,
+    "area": 62029,
+    "avgAge": 35,
+    "netSpeed": 50
+  },
+  {
+    "code": "NO",
+    "name": "Norway",
+    "capital": "Oslo",
+    "population": 5500000,
+    "area": 323802,
+    "avgAge": 40,
+    "netSpeed": 210
+  },
+  {
+    "code": "ME",
+    "name": "Montenegro",
+    "capital": "Podgorica",
+    "population": 620000,
+    "area": 13812,
+    "avgAge": 39,
+    "netSpeed": 80
+  },
+  {
+    "code": "MK",
+    "name": "Macedonia",
+    "capital": "Skopje",
+    "population": 2050000,
+    "area": 25713,
+    "avgAge": 39,
+    "netSpeed": 100
+  },
+  {
+    "code": "MD",
+    "name": "Moldova",
+    "capital": "Chișinău",
+    "population": 2500000,
+    "area": 33846,
+    "avgAge": 38,
+    "netSpeed": 140
+  },
+  {
+    "code": "LV",
+    "name": "Latvia",
+    "capital": "Riga",
+    "population": 1900000,
+    "area": 64589,
+    "avgAge": 44,
+    "netSpeed": 160
+  },
+  {
+    "code": "LU",
+    "name": "Luxembourg",
+    "capital": "Luxembourg",
+    "population": 660000,
+    "area": 2586,
+    "avgAge": 40,
+    "netSpeed": 200
+  },
+  {
+    "code": "LT",
+    "name": "Lithuania",
+    "capital": "Vilnius",
+    "population": 2850000,
+    "area": 65300,
+    "avgAge": 44,
+    "netSpeed": 180
+  },
+  {
+    "code": "KV",
+    "name": "Kosovo",
+    "capital": "Pristina",
+    "population": 1800000,
+    "area": 10908,
+    "avgAge": 31,
+    "netSpeed": 90
+  },
+  {
+    "code": "IS",
+    "name": "Iceland",
+    "capital": "Reykjavík",
+    "population": 380000,
+    "area": 103000,
+    "avgAge": 37,
+    "netSpeed": 221
+  },
+  {
+    "code": "IE",
+    "name": "Ireland",
+    "capital": "Dublin",
+    "population": 5200000,
+    "area": 70273,
+    "avgAge": 39,
+    "netSpeed": 150
+  },
+  {
+    "code": "HU",
+    "name": "Hungary",
+    "capital": "Budapest",
+    "population": 9600000,
+    "area": 93028,
+    "avgAge": 44,
+    "netSpeed": 170
+  },
+  {
+    "code": "HR",
+    "name": "Croatia",
+    "capital": "Zagreb",
+    "population": 3900000,
+    "area": 56594,
+    "avgAge": 44,
+    "netSpeed": 140
+  },
+  {
+    "code": "GR",
+    "name": "Greece",
+    "capital": "Athens",
+    "population": 10400000,
+    "area": 131957,
+    "avgAge": 46,
+    "netSpeed": 110
+  },
+  {
+    "code": "GE",
+    "name": "Georgia",
+    "capital": "Tbilisi",
+    "population": 3700000,
+    "area": 69700,
+    "avgAge": 38,
+    "netSpeed": 80
+  },
+  {
+    "code": "FR",
+    "name": "France",
+    "capital": "Paris",
+    "population": 68200000,
+    "area": 543965,
+    "avgAge": 42,
+    "netSpeed": 315
+  },
+  {
+    "code": "FI",
+    "name": "Finland",
+    "capital": "Helsinki",
+    "population": 5600000,
+    "area": 338145,
+    "avgAge": 43,
+    "netSpeed": 190
+  },
+  {
+    "code": "EE",
+    "name": "Estonia",
+    "capital": "Tallinn",
+    "population": 1350000,
+    "area": 45228,
+    "avgAge": 43,
+    "netSpeed": 170
+  },
+  {
+    "code": "ES",
+    "name": "Spain",
+    "capital": "Madrid",
+    "population": 48000000,
+    "area": 505990,
+    "avgAge": 45,
+    "netSpeed": 250
+  },
+  {
+    "code": "GB",
+    "name": "United Kingdom",
+    "capital": "London",
+    "population": 67500000,
+    "area": 243610,
+    "avgAge": 41,
+    "netSpeed": 140
+  },
+  {
+    "code": "DK",
+    "name": "Denmark",
+    "capital": "Copenhagen",
+    "population": 5900000,
+    "area": 43094,
+    "avgAge": 42,
+    "netSpeed": 230
+  },
+  {
+    "code": "DE",
+    "name": "Germany",
+    "capital": "Berlin",
+    "population": 84000000,
+    "area": 357022,
+    "avgAge": 46,
+    "netSpeed": 130
+  },
+  {
+    "code": "CZ",
+    "name": "Czech Republic",
+    "capital": "Prague",
+    "population": 10800000,
+    "area": 78867,
+    "avgAge": 43,
+    "netSpeed": 160
+  },
+  {
+    "code": "CH",
+    "name": "Switzerland",
+    "capital": "Bern",
+    "population": 8900000,
+    "area": 41277,
+    "avgAge": 43,
+    "netSpeed": 240
+  },
+  {
+    "code": "BY",
+    "name": "Belarus",
+    "capital": "Minsk",
+    "population": 9200000,
+    "area": 207600,
+    "avgAge": 41,
+    "netSpeed": 100
+  },
+  {
+    "code": "BA",
+    "name": "Bosnia and Herzegovina",
+    "capital": "Sarajevo",
+    "population": 3200000,
+    "area": 51209,
+    "avgAge": 44,
+    "netSpeed": 70
+  },
+  {
+    "code": "BG",
+    "name": "Bulgaria",
+    "capital": "Sofia",
+    "population": 6400000,
+    "area": 110879,
+    "avgAge": 45,
+    "netSpeed": 140
+  },
+  {
+    "code": "BE",
+    "name": "Belgium",
+    "capital": "Brussels",
+    "population": 11800000,
+    "area": 30528,
+    "avgAge": 42,
+    "netSpeed": 210
+  },
+  {
+    "code": "AZ",
+    "name": "Azerbaijan",
+    "capital": "Baku",
+    "population": 10400000,
+    "area": 86600,
+    "avgAge": 33,
+    "netSpeed": 60
+  },
+  {
+    "code": "AT",
+    "name": "Austria",
+    "capital": "Vienna",
+    "population": 9100000,
+    "area": 83871,
+    "avgAge": 44,
+    "netSpeed": 140
+  },
+  {
+    "code": "AM",
+    "name": "Armenia",
+    "capital": "Yerevan",
+    "population": 2800000,
+    "area": 29743,
+    "avgAge": 36,
+    "netSpeed": 110
+  },
+  {
+    "code": "AL",
+    "name": "Albania",
+    "capital": "Tirana",
+    "population": 2800000,
+    "area": 28748,
+    "avgAge": 38,
+    "netSpeed": 90
+  },
+  {
+    "code": "IT",
+    "name": "Italy",
+    "capital": "Rome",
+    "population": 59000000,
+    "area": 301340,
+    "avgAge": 47,
+    "netSpeed": 110
+  },
+  {
+    "code": "KZ",
+    "name": "Kazakhstan",
+    "capital": "Astana",
+    "population": 20000000,
+    "area": 148000,
+    "avgAge": 31,
+    "netSpeed": 80
+  },
+  {
+    "code": "LI",
+    "name": "Liechtenstein",
+    "capital": "Vaduz",
+    "population": 40000,
+    "area": 160,
+    "avgAge": 44,
+    "netSpeed": 200
+  },
+  {
+    "code": "IM",
+    "name": "Isle of Man",
+    "capital": "Douglas",
+    "population": 84000,
+    "area": 572,
+    "avgAge": 44,
+    "netSpeed": 140
+  },
+  {
+    "code": "GG",
+    "name": "Guernsey",
+    "capital": "St. Peter Port",
+    "population": 63000,
+    "area": 78,
+    "avgAge": 44,
+    "netSpeed": 140
+  },
+  {
+    "code": "JE",
+    "name": "Jersey",
+    "capital": "Saint Helier",
+    "population": 100000,
+    "area": 116,
+    "avgAge": 43,
+    "netSpeed": 140
+  },
+  {
+    "code": "FO",
+    "name": "Faroe Islands",
+    "capital": "Tórshavn",
+    "population": 55000,
+    "area": 1393,
+    "avgAge": 39,
+    "netSpeed": 180
+  },
+  {
+    "code": "AD",
+    "name": "Andorra",
+    "capital": "Andorra la Vella",
+    "population": 80000,
+    "area": 468,
+    "avgAge": 45,
+    "netSpeed": 150
+  },
+  {
+    "code": "MT",
+    "name": "Malta",
+    "capital": "Valletta",
+    "population": 520000,
+    "area": 316,
+    "avgAge": 43,
+    "netSpeed": 170
+  },
+  {
+    "code": "MC",
+    "name": "Monaco",
+    "capital": "Monaco",
+    "population": 36000,
+    "area": 2,
+    "avgAge": 55,
+    "netSpeed": 300
+  },
+  {
+    "code": "SM",
+    "name": "San Marino",
+    "capital": "San Marino",
+    "population": 34000,
+    "area": 61,
+    "avgAge": 45,
+    "netSpeed": 200
+  },
+  {
+    "code": "GI",
+    "name": "Gibraltar",
+    "capital": "Gibraltar",
+    "population": 34000,
+    "area": 6,
+    "avgAge": 42,
+    "netSpeed": 140
+  },
+  {
+    "code": "VA",
+    "name": "Vatican City",
+    "capital": "Vatican City",
+    "population": 800,
+    "area": 0,
+    "avgAge": 50,
+    "netSpeed": 100
+  }
+]
