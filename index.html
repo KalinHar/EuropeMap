@@ -1018,7 +1018,7 @@
                     return Math.max(...this.criteriaValues);
                 },
                 limits() {
-                    return [100, 8.5, 4.25, 1.25].map(limit => ({
+                    return [100, 10, 5, 1].map(limit => ({
                         backGround: { background: this.rgbColor(this.maxValue / limit) },
                         value: Math.round(this.maxValue / limit).toLocaleString()
                     }));
@@ -1080,4 +1080,5 @@
 
 
 </html>
+
 
