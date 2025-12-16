@@ -134,7 +134,7 @@
         .legend-item {
             color: white;
             margin: 5px;
-            padding-inline: 10px;
+            padding-inline: 5px;
             border-radius: 8px;
         }
 
@@ -239,7 +239,7 @@
                         <div class="legend">
                             <span class="legend-label">{{ nameOf(criteriaType) }}</span>
                             <span v-for="limit in limits" :key="limit.value" class="legend-item"
-                                :style="limit.backGround">{{ limit.value }}</span>
+                                :style="limit.backGround">{{ decorate(limit.value) }}</span>
                         </div>
                     </foreignObject>
                     <foreignObject v-if="tooltip.show" :x="tooltip.x" :y="tooltip.y" width="1" height="1"
@@ -247,7 +247,7 @@
                         <div class="custom-tooltip"
                             :style="{ transform: `translate(${tooltip.offsetX}px, ${tooltip.offsetY}px)` }">
                             <strong>{{ tooltip.name }}</strong><br />
-                            {{ nameOf(criteriaType) }}: {{ tooltip.value.toLocaleString() }}
+                            {{ nameOf(criteriaType) }}: {{ decorate(tooltip.value.toLocaleString()) }}
                         </div>
                     </foreignObject>
                 </svg>
@@ -266,11 +266,11 @@
                     </div>
                     <div class="stat-item">
                         <span class="stat-label">Area:</span>
-                        <span class="stat-value">{{ selectedCountry.props.area.toLocaleString() }} km2</span>
+                        <span class="stat-value">{{ selectedCountry.props.area.toLocaleString() }} km²</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-label">Average Population Age:</span>
-                        <span class="stat-value">{{ selectedCountry.props.averagePopulationAge }}</span>
+                        <span class="stat-value">{{ selectedCountry.props.averagePopulationAge }} years</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-label">Internet Speed:</span>
@@ -1073,6 +1073,18 @@
                         default:
                             return '';
                     }
+                },
+                decorate(value) {
+                    switch (this.criteriaType) {
+                        case 'area':
+                            return `${value} km²`;
+                        case 'averagePopulationAge':
+                            return `${value} years`;
+                        case 'internetSpeed':
+                            return `${value} Mb/s`;
+                        default:
+                            return value;
+                    }
                 }
             },
         });
@@ -1081,7 +1093,6 @@
 
 
 </html>
-
 
 
 
