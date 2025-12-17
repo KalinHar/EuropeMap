@@ -192,7 +192,7 @@
             padding: 6px 6px;
             border: none;
             color: #fff;
-            background: linear-gradient(135deg, #bb9add 0%, #748ae9 100%);;
+            background: linear-gradient(135deg, #bb9add 0%, #748ae9 100%);
             cursor: pointer;
             flex: 1;
             font-size: 14px;
@@ -206,7 +206,6 @@
         .switch-container button.active {
             background: #c9b1e9;
         }
-
     </style>
 </head>
 
@@ -247,7 +246,8 @@
                         <div class="custom-tooltip"
                             :style="{ transform: `translate(${tooltip.offsetX}px, ${tooltip.offsetY}px)` }">
                             <strong>{{ tooltip.name }}</strong><br />
-                            {{ nameOf(criteriaType) }}: {{ decorate(tooltip.value.toLocaleString()) }}
+                            {{ nameOf(criteriaType) }}: {{
+                            decorate(tooltip.value.toLocaleString()) }}
                         </div>
                     </foreignObject>
                 </svg>
@@ -267,6 +267,10 @@
                     <div class="stat-item">
                         <span class="stat-label">Area:</span>
                         <span class="stat-value">{{ selectedCountry.props.area.toLocaleString() }} km²</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Density:</span>
+                        <span class="stat-value">{{ Math.round(selectedCountry.props.population / selectedCountry.props.area) }} p/km²</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-label">Average Population Age:</span>
@@ -1059,16 +1063,40 @@
                         y: cursor.y,
                     };
                 },
-                rgbColor(value) {
-                    if (value === 0) return " rgb(0, 0, 0, 0.1)";
-                    // Interpolate between sky blue (#87CEEB) and dark blue (#00008B)
+                rgbColor(value, tonality = "blue") {
+                    if (value === 0) return "rgba(0, 0, 0, 0.1)";
+
                     const ratio = 1 - value / this.maxValue;
-                    // const ratio =
-                    //     (population - this.minValue) /
-                    //     (this.maxValue - this.minValue);
-                    const r = Math.round(135 * ratio); // 135 → 0
-                    const g = Math.round(206 * ratio); // 206 → 0
-                    const b = Math.round(139 + ratio * 96); // 235 → 139
+                    const spectrums = {
+                        blue: {
+                            from: { r: 135, g: 206, b: 235 }, // sky blue
+                            to: { r: 0, g: 0, b: 139 }  // dark blue
+                        },
+                        red: {
+                            from: { r: 255, g: 182, b: 193 }, // light red
+                            to: { r: 139, g: 0, b: 0 }    // dark red
+                        },
+                        green: {
+                            from: { r: 144, g: 238, b: 144 }, // light green
+                            to: { r: 0, g: 100, b: 0 }    // dark green
+                        },
+                        orange: {
+                            from: { r: 255, g: 200, b: 120 }, // light orange
+                            to: { r: 255, g: 140, b: 0 }    // dark orange
+                        },
+                        dark: {
+                            from: { r: 200, g: 200, b: 200 }, // light gray
+                            to: { r: 30, g: 30, b: 30 }   // near black
+                        },
+                        light: {
+                            from: { r: 255, g: 255, b: 255 }, // white
+                            to: { r: 180, g: 180, b: 180 }  // light gray
+                        }
+                    };
+                    const spectrum = spectrums[tonality] || spectrums.blue;
+                    const r = Math.round(spectrum.to.r + ratio * (spectrum.from.r - spectrum.to.r));
+                    const g = Math.round(spectrum.to.g + ratio * (spectrum.from.g - spectrum.to.g));
+                    const b = Math.round(spectrum.to.b + ratio * (spectrum.from.b - spectrum.to.b));
 
                     return `rgb(${r}, ${g}, ${b})`;
                 },
@@ -1103,8 +1131,4 @@
     </script>
 </body>
 
-
 </html>
-
-
-
