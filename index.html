@@ -246,8 +246,7 @@
                         <div class="custom-tooltip"
                             :style="{ transform: `translate(${tooltip.offsetX}px, ${tooltip.offsetY}px)` }">
                             <strong>{{ tooltip.name }}</strong><br />
-                            {{ nameOf(criteriaType) }}: {{
-                            decorate(tooltip.value.toLocaleString()) }}
+                            {{ nameOf(criteriaType) }}: {{ decorate(tooltip.value.toLocaleString()) }}
                         </div>
                     </foreignObject>
                 </svg>
@@ -1062,6 +1061,9 @@
                         x: cursor.x,
                         y: cursor.y,
                     };
+                    this.hoveredCountry.code === 'SJ'
+                        ? this.tooltip.offsetY = 30
+                        : this.tooltip.offsetY = -60;
                 },
                 rgbColor(value, tonality = "blue") {
                     if (value === 0) return "rgba(0, 0, 0, 0.1)";
