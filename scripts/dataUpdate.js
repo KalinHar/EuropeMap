@@ -1,4 +1,5 @@
 import fs from "fs";
+// countries.json contains the same data as const in countries.js
 import countries from "./countries.json" with { type: "json" };
 // import euroCountries from './euroCountries.json' with {type: 'json'};
 // import asiaCountries from './asiaCountries.json' with {type: 'json'};
@@ -8,17 +9,21 @@ const regionUrl = (region) => {
     return `https://countries.dev/region/${region}?fields=name%2Ccapital%2Calpha2Code%2Carea%2Cpopulation%2Cflags`;
 };
 
+function updateProp(country, newData) {
+    country.name = newData.name ? newData.name : country.name;
+    country.capital = newData.capital ? newData.capital : country.capital;
+    country.flag = newData.flags.png;
+    country.props.area = newData.area ? newData.area : country.props.area;
+    country.props.population = newData.population ? newData.population : country.props.population;
+}
+
 async function getEuropeData() {
     const res = await fetch(regionUrl("europe"));
     const europe = await res.json();
     countries.forEach((country) => {
         let finded = europe.find((e) => e.alpha2Code === country.code);
         if (finded) {
-            country.name = finded.name ? finded.name : country.name;
-            country.capital = finded.capital ? finded.capital : country.capital;
-            country.flag = finded.flags.png;
-            country.props.area = finded.area ? finded.area : country.props.area;
-            country.props.population = finded.population ? finded.population : country.props.population;
+            updateProp(country, finded);
         } else {
             missCode.push(country.code);
         }
@@ -27,6 +32,7 @@ async function getEuropeData() {
     if (missCode.length) getMissingAsia();
 }
 
+// Added some countries on the Europe-Asia border
 async function getMissingAsia() {
     const res = await fetch(regionUrl("asia"));
     const asia = await res.json();
@@ -34,11 +40,7 @@ async function getMissingAsia() {
         if (missCode.includes(a.alpha2Code)) {
             let country = countries.find((c) => a.alpha2Code === c.code);
             if (country) {
-                country.name = a.name ? a.name : country.name;
-                country.capital = a.capital ? a.capital : country.capital;
-                country.flag = a.flags.png;
-                country.props.area = a.area ? a.area : country.props.area;
-                country.props.population = a.population ? a.population : country.props.population;
+                updateProp(country, a);
             }
         }
     });
