@@ -122,7 +122,12 @@
             computed: {
                 countries() {
                     return countries.map(country => {
-                        country.props.populationDensity = Math.round(country.props.population / country.props.area);
+                        const density = country.props.population / country.props.area;
+                        country.props.populationDensity = density < 10
+                            ? density < 1
+                                ? density.toFixed(2)
+                                : density.toFixed(1)
+                            : density.toFixed();
                         return country;
                     });
                 },
